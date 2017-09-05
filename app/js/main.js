@@ -194,13 +194,11 @@ function lightenNav() {
     $(".nav-buttons").eq(k).css("background-color", "yellow")
 
 
-};
-// $('#header_container').hide(0)
+}
+
 
 $("#header_circle").click(function () {
-
     $('#header_container').slideToggle("slow")
 
 
-    // $("#header_circle").css('margin-top', '70px')
 });
