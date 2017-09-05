@@ -10,22 +10,17 @@ header {
   position: relative;
   z-index: 999;
   display:flex;
-  justify-content:space-between;
   display: none;
-  //font-size:0px;
+  justify-content:space-between;
 
 }
 
-//#header_container:hover{
-//  height: 100px;
-//  position: absolute;
-//  z-index: 999;
-//  font-size:15px
-
-//}
 .header-logo{
   width:20%;
   height:100px;
+  position: absolute;
+  right:0px;
+  top:0px;
   border:1px solid red;
 }
 .header-contacts{
@@ -42,15 +37,12 @@ header {
   }
 }
 #header_circle{
-  width:80px;
-  height:60px;
-  border-radius: 100%;
-  //border-bottom-right-radius: 50%;
-  background: red;
+  width:40px;
+  height:40px;
   position: relative;
-  //z-index: 999;
   left:48%;
-  margin-top:-30px;
-
-
+  background: url("../img/arrD.png") center  repeat-y;
+  background-position-y: 0px;
+  background-size: cover;
+  opacity: 0.5;
 }
