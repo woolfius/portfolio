@@ -1,0 +1,43 @@
+
+.navbar{
+  border:1px solid red;
+
+  height: 50%;
+position: fixed;
+  z-index: 9999;
+  top:20%;
+  left:0px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  font-size: 0px;
+}
+@keyframes nav-animation {
+  0%   {background-color:red;
+    width:50px;
+    font-size: 0px;
+  }
+  100% {; background-color:green;
+    font-size:15px;  width:150px;}
+
+
+}
+.nav-buttons{
+  width:50px;
+  height:60px;
+  border-radius: 10%;
+  background: red;
+
+
+}
+.nav-buttons:hover{
+
+  -webkit-animation-name: nav-animation;
+  -moz-animation-name: nav-animation;
+  -o-animation-name: nav-animation;
+  animation-name: nav-animation;
+  animation-duration: 1s;
+
+
+
+}

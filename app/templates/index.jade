@@ -1,0 +1,35 @@
+doctype html
+html(lang="eng")
+    head
+        title Akcec-m
+        meta(charset="UTF-8")
+        include components/links
+    body(ng-app="myapp" ng-controller="myCtrl as my")
+        header
+
+            include components/header
+        main
+            aside
+                include components/aside
+
+            section
+                include components/slides
+                div#particles-js
+                div#leftArrow.arrow
+                div#rightArrow.arrow
+
+        footer
+            //include some modules into the header
+
+            include components/footer
+        //script( src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js")
+        //script( src="//ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-route.js")
+    script( src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js")
+    script( src="../js/particles.js")
+
+    script( src='../js/main.js')
+
+
+
+
+
