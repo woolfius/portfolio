@@ -116,8 +116,9 @@ particlesJS('particles-js',
 var x = 0
 var k = 0
 lightenNav()
+
 $("#rightArrow").click(function () {
-    if (x == -400) {
+    if (x == -1000) {
         x = 0
         $(".center").animate({
             left: x + '%'
@@ -224,36 +225,128 @@ $("#header_circle").mouseleave(function () {
 });
 
 
+$('.nav-buttons').mouseenter(function () {
 
 
-$('.nav-buttons').mouseenter(function(){
-
-
-    $(this).animate({width:'150px'},100)
+    $(this).animate({width: '150px'}, 100)
 });
-$('.nav-buttons').mouseleave(function(){
-    $(this).animate({width:'50px'},100)
+$('.nav-buttons').mouseleave(function () {
+    $(this).animate({width: '50px'}, 100)
 });
-$('.amPhoto').mouseenter(function(){
+$('.amPhoto').mouseenter(function () {
     $(this).animate({
-        borderRadius:0
-    },100)
+        borderRadius: 0
+    }, 100)
 });
 
 
-$('.amPhoto').mouseleave(function(){
+$('.amPhoto').mouseleave(function () {
     $(this).animate({
+        borderRadius: '50%'
+    }, 100)
+});
+
+// if(x==0){
+//     moveSectors()
+// }
+// function moveSectors() {
+//
+//     for (var i = 0; i < 4; i++) {
+//         for (var j = 0; j < 4; j++) {
+//             var x = parseInt($(window).width() - Math.random() * 1000)
+//             var y = parseInt($(window).height() - Math.random() * 1000)
+//             if (y >= $(window).height()) {
+//                 y = $(window).height() - 200
+//             }
+//             $('.sector').css('position', 'absolute')
+//             $('.sector').eq(j).animate({
+//                 left: +x,
+//                 top: +y
+//             }, 200)
+//             console.log(x, y)
+//         }
+//     }
+// }
+
+$('.sector').click(function () {
+
+    //1 move
+    $(".cRT").animate({
+        top: '0vh',
+        left: "80vw",
+        width: '15vh',
+        height: '15vh',
         borderRadius:'50%'
-    },100)
-});
-
-$('.sector').mouseenter(function(){
-    $(this).animate({
-        borderRadius:0
-    })
+    }, 7000);
 
 
+    $(".cRB").animate({
+        top: '70vh',
+        left: "80vw",
+        width: '15vh',
+        height: '15vh',
+        borderRadius:'50%'
+    }, 7000);
 
+
+    $(".cLB").animate({
+        top: '70vh',
+        left: "10vw",
+        width: '15vh',
+        height: '15vh',
+        borderRadius:'50%'
+    }, 7000);
+
+
+    $(".cLT").animate({
+        top: '0vh',
+        left: "10vw",
+        width: '15vh',
+        height: '15vh',
+        borderRadius:'50%'
+         }, 7000);
+
+    $(".cRT").animate({
+        top: '19vh',
+        left: "50vw",
+        width: '25vh',
+        height: '25vh',
+        borderRadius:0,
+        borderTopRightRadius:'100%'
+
+    }, 7000);
+
+
+    $(".cRB").animate({
+        top: '46vh',
+        left: "50vw",
+        width: '25vh',
+        height: '25vh',
+        borderRadius:0,
+        borderBottomRightRadius:'100%'
+
+    }, 7000);
+
+
+    $(".cLB").animate({
+        top: '46vh',
+        left: "37vw",
+        width: '25vh',
+        height: '25vh',
+        borderRadius:0,
+        borderBottomLeftRadius:'100%'
+    }, 7000);
+
+
+    $(".cLT").animate({
+        top: '19vh',
+        left: "37vw",
+        width: '25vh',
+        height: '25vh',
+        borderRadius:0,
+        borderTopLeftRadius:'100%'
+
+    }, 7000);
 
 
 })

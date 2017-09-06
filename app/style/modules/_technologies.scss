@@ -1,6 +1,6 @@
-.circleT{
-  width:30vw;
-  height:30vw;
+.circleT {
+  width: 30vw;
+  height: 30vw;
   //border:2px solid red;
   display: flex;
   flex-wrap: wrap;
@@ -8,27 +8,39 @@
   align-items: stretch;
 
 }
-.sector{
-  width:14vw;
-  height:14vw;
- ;
-  border:2px solid green;
 
-
+.sector {
+  width: 5vw;
+  height: 5vw;;
+  border: 2px solid green;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
 }
-.cRT{
+
+.cRT {
   border-top-right-radius: 100%;
-
-
+  left:0;
+  bottom:0;
 }
-.cRB{
+
+.cRB {
   border-bottom-right-radius: 100%;
+  left:0;
+  top:0;
+}
+
+.cLB {
+  border-bottom-left-radius: 100%;
+  right:0;
+  top:0;
 
 }
-.cLB{
-border-bottom-left-radius: 100%;
-}
-.cLT{
-border-top-left-radius: 100%;
+
+.cLT {
+  border-top-left-radius: 100%;
+  right:0;
+  bottom:0;
 }
