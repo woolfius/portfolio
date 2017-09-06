@@ -1,0 +1,34 @@
+.circleT{
+  width:30vw;
+  height:30vw;
+  //border:2px solid red;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: stretch;
+
+}
+.sector{
+  width:14vw;
+  height:14vw;
+ ;
+  border:2px solid green;
+
+
+
+}
+.cRT{
+  border-top-right-radius: 100%;
+
+
+}
+.cRB{
+  border-bottom-right-radius: 100%;
+
+}
+.cLB{
+border-bottom-left-radius: 100%;
+}
+.cLT{
+border-top-left-radius: 100%;
+}

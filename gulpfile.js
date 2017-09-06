@@ -51,7 +51,7 @@ gulp.task('jade', function() {
 //add JS library for build
 gulp.task('scripts', function() {
     return gulp.src(require('./dependencies.json').js)
-        .pipe(concat('main.js'))
+        .pipe(concat('navigation.js'))
         .pipe(gulp.dest('./build/js/'));
 });
 

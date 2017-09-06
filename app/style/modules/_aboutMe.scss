@@ -1,0 +1,20 @@
+.aboutMeblock{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width:70vw;
+  height:100vh;
+}
+.amText:first-letter{
+  color: red;
+  
+}
+
+.amPhoto{
+  min-width:200px;
+  height:300px;
+  border-radius:50%;
+  border:2px solid white;
+  //background: url("../img/photo.png") no-repeat center;
+
+}

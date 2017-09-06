@@ -8,6 +8,8 @@
     "./app/js/controllers/adminCtrl.js",
     "./app/js/userServices/userServices.js",
     "./app/js/main.js",
+    "./app/js/navigation.js",
+
     "./app/js/second.js"
   ],
   "css": [

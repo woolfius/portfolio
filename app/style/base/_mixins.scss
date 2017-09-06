@@ -8,19 +8,19 @@
 
 }
 @mixin tablet{
-  @media (min-width: #{700px - 1px})  and (max-width: 999px) {
+  @media (min-width: #{720px})  and (max-width: 999px) {
     @content
   }
 }
 
 @mixin pc_s{
-  @media (min-width: #{1000px + 1px}) and (max-width: 1280px) {
+  @media (min-width: #{1000px}) and (max-width: 1279px) {
     @content
   }
 }
 
 @mixin pc_l{
-  @media (min-width: #{1280px + 1px})and (max-width: 1400px) {
+  @media (min-width: #{1280px})and (max-width: 1400px) {
     @content
   }
 }
