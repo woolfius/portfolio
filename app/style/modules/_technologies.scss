@@ -12,12 +12,11 @@
 .sector {
   width: 0px;
   height: 0px;
-  border: 3px solid white;
+  border: 3px solid antiquewhite;
   position: absolute;
   display: flex;
   justify-content: center;
   align-items: center;
-
 
 }
 
@@ -48,7 +47,26 @@
 }
 
 .techno{
-  width:50px;
-  height:50px;
-  border:2px solid red
+  width:0px;
+  color: darkgrey;
+  height:0px;
+  border:0px solid antiquewhite;
+  position: absolute;
+  background: antiquewhite;
+  overflow: hidden;
+  box-sizing: border-box;
+
+}
+
+.gear{
+  width:0px;
+  height: 0px;
+
+  background:  url("../img/gear.png") center  no-repeat;
+  background-size: 100%;
+  position: absolute;
+
+}
+.centralGears{
+  position: absolute;
 }

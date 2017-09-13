@@ -51,13 +51,18 @@ gulp.task('jade', function() {
 //add JS library for build
 gulp.task('scripts', function() {
     return gulp.src(require('./dependencies.json').js)
-        .pipe(concat('navigation.js'))
+        .pipe(concat('scripts.js'))
+        .pipe(gulp.dest('./build/js/'));
+});
+gulp.task('scripts-libs', function() {
+    return gulp.src('app/js/libs/**/*.js')
+        .pipe(concat('libs.js'))
         .pipe(gulp.dest('./build/js/'));
 });
 
 //add styles library
-gulp.task('styles:libs', function() {
-    return gulp.src(require('./dependencies.json').css)
+gulp.task('styles-libs', function() {
+    return gulp.src('app/style/libs/**/*.css')
         .pipe(concat('libs.css'))
         .pipe(gulp.dest('./build/css/'));
 });
@@ -74,7 +79,7 @@ gulp.task('watch', function() {
     gulp.watch('app/img/**/*.*', ['image']);
     gulp.watch('app/templates/**/*.jade', ['jade']);
     gulp.watch('app/js/libs/**/*.js', ['scripts']);
-    gulp.watch('app/js/**/*.js', ['scripts']);
+    gulp.watch('app/js/**/*.js', ['scripts']).on('change', browserSync.reload);;
     gulp.watch('app/*.html').on('change', browserSync.reload);
 });
 

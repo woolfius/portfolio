@@ -5,14 +5,14 @@ particlesJS('particles-js',
     {
         "particles": {
             "number": {
-                "value": 120,
+                "value": 80,
                 "density": {
                     "enable": true,
                     "value_area": 800
                 }
             },
             "color": {
-                "value": "#ffffff"
+                "value": "#252525"
             },
             "shape": {
                 "type": "polygon",
@@ -21,7 +21,7 @@ particlesJS('particles-js',
                     "color": "#000000"
                 },
                 "polygon": {
-                    "nb_sides": 5
+                    "nb_sides": 8
                 },
                 "image": {
                     "src": "img/github.svg",
@@ -52,7 +52,7 @@ particlesJS('particles-js',
             "line_linked": {
                 "enable": true,
                 "distance": 224,
-                "color": "#ffffff",
+                "color": "#252525",
                 "opacity": 0.25,
                 "width": 1
             },
@@ -113,9 +113,65 @@ particlesJS('particles-js',
         "retina_detect": true
     }
 );
+var projects = [
+    {
+        name: 'alco delivery',
+        tupe: 'online store',
+        cms: false,
+        technology: "AngularJs, SCSS",
+        adaptive: 'adaptive for Mobile, Tablets,PC',
+        commerce: 'commercial',
+        mainPage: '../img/alco/main.png',
+        secondPage: '../img/alco/cat.png',
+        thirdPage: '../img/alco/third.png',
+        mobile: '../img/alco/mainMob.png',
+        tablet: '../img/alco/mainMob.png',
+        description: "lorem ipsum set immer lorem ipsum set immer lorem ipsum set immer lorem ipsum set immer lorem ipsum set immer lorem ipsum set immer lorem ipsum set immer lorem ipsum set immer lorem ipsum set immer ",
+        release: false,
+        URL: ""
+
+
+    },
+    {
+        name: 'Furniture',
+        tupe: 'online store',
+        CMS: false,
+        technology: "AngularJs, SCSS",
+        adaptive: 'adaptive for Mobile, Tablets,PC',
+        commerce: 'commercial',
+        mainPage: '../img/furniture/main.png',
+        secondPage: '../img/furniture/cat.png',
+        thirdPage: '../img/furniture/third.png',
+        mobile: '../img/furniture/mainMob.png',
+        tablet: '../img/furniture/mainMob.png',
+        description: "lorem ipsum set immer lorem ipsum set immer lorem ipsum set immer lorem ipsum set immer lorem ipsum set immer lorem ipsum set immer lorem ipsum set immer lorem ipsum set immer lorem ipsum set immer ",
+        release: false,
+        URL: ""
+
+
+    },
+    {
+        name: 'Demy',
+        tupe: 'online store',
+        technology: "OpenCart, CSS",
+        CMS: true,
+        CMSName: 'OpenCart',
+        adaptive: 'adaptive for Mobile, Tablets,PC',
+        commerce: 'commercial',
+        mainPage: '../img/demy/first.png',
+        secondPage: '../img/demy/second.png',
+        thirdPage: '../img/demy/third.png',
+        mobile: '../img/demy/mainMob.png',
+        tablet: '../img/demy/mainMob.png',
+        description: "lorem ipsum set immer lorem ipsum set immer lorem ipsum set immer lorem ipsum set immer lorem ipsum set immer lorem ipsum set immer lorem ipsum set immer lorem ipsum set immer lorem ipsum set immer ",
+        release: true,
+        URL: "http://www.demy.in.ua/"
+    }
+];
 var x = 0
 var k = 0
 lightenNav()
+
 
 $("#rightArrow").click(function () {
     if (x == -400) {
@@ -185,22 +241,9 @@ $(".nav-buttons").eq(4).click(function () {
     lightenNav()
 });
 
-function lightenNav() {
-    k = Math.abs(parseInt(x / 100))
-    if (k == 0) {
-        returnSectors()
-        moveSectors()
-    }
-    else {
-        returnSectors()
-    }
-    for (var i = 0; i < 5; i++) {
-        $(".nav-buttons").eq(i).css("border-color", "red")
-    }
-    $(".nav-buttons").eq(k).css("border-color", "yellow")
-};
 
-var arrowRotate = 0;
+// var arrowRotate = 0;
+//////////////////////////////////////////////////////////slide with technologies????????????????????????//////////////
 $("#header_circle").click(function () {
     arrowRotate += 180
 
@@ -241,49 +284,16 @@ $('.nav-buttons').mouseenter(function () {
 $('.nav-buttons').mouseleave(function () {
     $(this).animate({width: '50px'}, 100)
 });
-$('.amPhoto').mouseenter(function () {
-    $(this).animate({
-        borderRadius: 0
-    }, 100)
-});
 
 
-$('.amPhoto').mouseleave(function () {
-    $(this).animate({
-        borderRadius: '50%'
-    }, 100)
-});
-
-// if(x==0){
-//     moveSectors()
-// }
-// function moveSectors() {
-//
-//     for (var i = 0; i < 4; i++) {
-//         for (var j = 0; j < 4; j++) {
-//             var x = parseInt($(window).width() - Math.random() * 1000)
-//             var y = parseInt($(window).height() - Math.random() * 1000)
-//             if (y >= $(window).height()) {
-//                 y = $(window).height() - 200
-//             }
-//             $('.sector').css('position', 'absolute')
-//             $('.sector').eq(j).animate({
-//                 left: +x,
-//                 top: +y
-//             }, 200)
-//             console.log(x, y)
-//         }
-//     }
-// }
-// for (var i = 0; i <= 5; i++) {
-// $(".cRT").clone().appendTo('.circleT')
-// }
-// $('.sector').click(function () {
-//     returnSectors()
-// })
 function returnSectors() {
     var wh = parseInt($(window).height() / 100);
     var ww = parseInt($(window).width() / 100);
+
+    $('.gear').css({
+        width: 0,
+        height: 0
+    })
     $(".cRT").delay(0).animate({
         top: 95 * wh + 'px',
         left: 0,
@@ -327,14 +337,45 @@ function returnSectors() {
         borderTopLeftRadius: '100%'
 
     }, 500);
+    $(".RTtechno").css({
+        width: 0 * ww + 'px',
+        border: 0,
+        height: 0 * ww + 'px',
+        top: 10 * wh + 'px',
+        left: 72.5 * ww + 'px',
+    })
+    $(".RBtechno").css({
+        width: 0 * ww + 'px',
+        border: 0,
 
+        height: 0 * ww + 'px',
+        top: 10 * wh + 22 * ww + 'px',
+        left: 72.5 * ww + 'px',
+    })
+    $(".LTtechno").css({
+        width: 0 * ww + 'px',
+        height: 0 * ww + 'px',
+        top: 10 * wh + 'px',
+        left: 10.5 * ww + 'px',
+        border: 0,
+
+    })
+    $(".LBtechno").css({
+        width: 0 * ww + 'px',
+        border: 0,
+
+        height: 0 * ww + 'px',
+        top: 10 * wh + 22 * ww + 'px',
+        left: 10.5 * ww + 'px',
+    })
 };
-
+var wh = parseInt($(window).height() / 100);
+var ww = parseInt($(window).width() / 100);
 function moveSectors() {
-    var wh = parseInt($(window).height() / 100);
-    var ww = parseInt($(window).width() / 100);
+    wh = parseInt($(window).height() / 100);
+    ww = parseInt($(window).width() / 100);
 //
-    $(".cRT").delay(200).animate({
+    $(".cRT").delay(250).animate({
         top: 10 * wh + 'px',
         left: 52.5 * ww + 'px',
         width: 20 * ww + 'px',
@@ -343,7 +384,7 @@ function moveSectors() {
         borderTopRightRadius: '100%'
 
     }, 300);
-    $(".cRB").delay(200).animate({
+    $(".cRB").delay(250).animate({
         top: 10 * wh + 22 * ww + 'px',
         left: 52.5 * ww + 'px',
         width: 20 * ww + 'px',
@@ -352,7 +393,7 @@ function moveSectors() {
         borderBottomRightRadius: '100%'
 
     }, 300);
-    $(".cLB").delay(200).animate({
+    $(".cLB").delay(250).animate({
         top: 10 * wh + 22 * ww + 'px',
         left: 30.5 * ww + 'px',
         width: 20 * ww + 'px',
@@ -360,7 +401,7 @@ function moveSectors() {
         borderRadius: 0,
         borderBottomLeftRadius: '100%'
     }, 300);
-    $(".cLT").delay(000).animate({
+    $(".cLT").delay(250).animate({
         top: 10 * wh,
         left: 30.5 * ww + 'px',
         width: 20 * ww + 'px',
@@ -372,72 +413,233 @@ function moveSectors() {
 
 };
 
-function returnRadius() {
-    $(".cRT").animate({
-        borderRadius: 0,
-        borderTopRightRadius: '100%'
-    }, 200)
-    $(".cRB").animate({
-        borderRadius: 0,
-        borderBottomRightRadius: '100%'
-    }, 200)
-    $(".cLT").animate({
-        borderRadius: 0,
-        borderTopLeftRadius: '100%'
-    }, 200)
-    $(".cLB").animate({
-        borderRadius: 0,
-        borderBottomLeftRadius: '100%'
-    }, 200)
+//styling techno texts
+$(".RTtechno").css({
 
-}
-var indexround = 0
-function checkIndexRotate() {
-    if (indexround >= 5) {
-        indexround = 0
-        returnRadius()
-        // alert('ddd')
-    }
+    height: 0 * ww + 'px',
+    top: 10 * wh + 'px',
+    left: 72.5 * ww + 'px',
+});
+$(".RBtechno").css({
 
-}
+    height: 0 * ww + 'px',
+    top: 10 * wh + 22 * ww + 'px',
+    left: 72.5 * ww + 'px',
+});
+$(".LTtechno").css({
+    top: 10 * wh + 'px',
+    left: 10.5 * ww + 'px',
+});
+$(".LBtechno").css({
+    height: 0 * ww + 'px',
+    top: 10 * wh + 22 * ww + 'px',
+    left: 10.5 * ww + 'px',
+});
+
+
 $(".cRT").mouseenter(function () {
-    indexround += 1
     $(this).animate({
         borderTopRightRadius: '0',
         borderBottomLeftRadius: '100%'
 
     }, 400)
-    $("#RTtechno").animate({
-        width: 20 * ww + 'px',
-        height: 20 * ww + 'px'
-    })
+    $(".RTtechno").delay(400).animate({
+        borderWidth: "2px",
+        top: 10 * wh + 'px',
+        left: 72.5 * ww + 'px',
+        width: 20 * ww + 'px'
+    }, 100)
+    $(".RTtechno").delay(400).animate({
+        height: 20 * ww + 'px',
+    }, 100)
+    $(".gearB").delay(400).animate({
+        right: -0.3 * ww + 'px',
+        top: -0.5 * ww + 'px',
+        width: 11 * ww + 'px',
+        height: 11 * ww + 'px',
+    }, 200)
 
-})
+});
+
 $(".cRB").mouseenter(function () {
-    indexround += 1
     $(this).animate({
         borderBottomRightRadius: '0',
         borderTopLeftRadius: '100%'
 
-    }, 400, checkIndexRotate())
+    }, 400)
+    $(".RBtechno").delay(400).animate({
+        borderWidth: "2px",
+        left: 72.5 * ww + 'px',
+        width: 20 * ww + 'px'
+    }, 200)
+    $(".RBtechno").delay(400).animate({
+        height: 20 * ww + 'px',
+    }, 200)
+    $(".gearM").delay(400).animate({
+        right: 1.2 * ww + 'px',
+        bottom: 1.5 * ww + 'px',
+        width: 8 * ww + 'px',
+        height: 8 * ww + 'px',
+    }, 200)
+});
 
-})
 $(".cLB").mouseenter(function () {
-    indexround += 1
     $(this).animate({
         borderBottomLeftRadius: '0',
         borderTopRightRadius: '100%'
 
-    }, 400, checkIndexRotate())
+    }, 400)
+    $(".LBtechno").delay(400).animate({
+        borderWidth: "2px",
+        // top: 10 * wh + 'px',
+        left: 10.5 * ww + 'px',
+        width: 20 * ww + 'px'
+    }, 200)
+    $(".LBtechno").delay(100).animate({
+        height: 20 * ww + 'px',
+    }, 200)
+    $(".gearL").delay(400).animate({
+        width: 11 * ww + 'px',
+        height: 11 * ww + 'px',
+        left: -0.2 * ww + 'px',
+        bottom: 0,
+    }, 200)
 
-})
+});
+
 $(".cLT").mouseenter(function () {
-    indexround += 1
     $(this).animate({
         borderTopLeftRadius: '0',
         borderBottomRightRadius: '100%'
 
-    }, 400,)
+    }, 400)
+    $(".LTtechno").delay(400).animate({
+        borderWidth: "2px",
+        left: 10.5 * ww + 'px',
+        width: 20 * ww + 'px'
+    }, 200)
+    $(".LTtechno").delay(100).animate({
+        height: 20 * ww + 'px',
+    }, 200)
+    $(".gearS").delay(400).animate({
+        width: 8 * ww + 'px',
+        height: 8 * ww + 'px',
+        top: 1.0 * ww + 'px',
+        left: 1.2 * ww + 'px',
+        // transform: 'rotate(30deg)'
+    }, 200)
+});
+
+$('.centralGears').css({
+    top: 10 * wh + 12 * ww + 'px',
+    left: 31.5 * ww + 11 * ww + 'px',
+    height: 18 * ww + 'px',
+    width: 18 * ww + 'px',
 
 })
+function rotateGear() {
+    var deg = 0
+    var deg1 = 0
+    var deg3 = 23
+    var deg2 = 23
+    setInterval(function () {
+        deg1 -= 1
+        deg -= 1;
+        deg2 += 1;
+        deg3 += 1
+        $('.gearS').css({
+            transform: 'rotate(' + deg3 + 'deg)'
+        })
+        $('.gearB').css({
+            transform: 'rotate(' + deg1 + 'deg)'
+
+        })
+        $('.gearM').css({
+            transform: 'rotate(' + deg2 + 'deg)'
+        })
+        $('.gearL').css({
+            transform: 'rotate(' + deg + 'deg)'
+        })
+    }, 10)
+
+
+}
+rotateGear()
+
+function lightenNav() {
+    k = Math.abs(parseInt(x / 100))
+    if (k == 0) {
+        textAnimateIn()
+
+        console.log(projects)
+    }
+    if (k != 0) {
+        textAnimateOut()
+    }
+
+if (k == 1) {
+    // returnSectors()
+    moveSectors()
+}
+else {
+    returnSectors()
+}
+
+for (var i = 0; i < 5; i++) {
+    $(".nav-buttons").eq(i).css("border-color", "red")
+}
+$(".nav-buttons").eq(k).css("border-color", "yellow")
+}
+;
+/////////////slide with about me info//////////////////////////////////////////////////////////////////////////////
+//textilate
+$(function () {
+    $('.textillate-demo').textillate({
+        loop: false,
+        minDisplayTime: 1000,
+        initialDelay: 0,
+        autoStart: false,
+        inEffects: [],
+        outEffects: ['rollOut'],
+        in: {
+            effect: 'flipInY',
+            delayScale: 0.5,
+            // delayScale: 1,
+            sync: false,
+            shuffle: true
+
+        },
+        out: {
+            effect: 'rollOut',
+
+            delay: 0,
+            sync: true,
+        },
+        type: 'word'
+    })
+
+})
+function textAnimateIn() {
+    $('.textillate-demo').textillate('in')
+}
+function textAnimateOut() {
+    $('.textillate-demo').textillate('out')
+}
+$('.amPhoto').mouseenter(function () {
+    $(this).animate({
+        borderRadius: 0
+    }, 100).delay(200).css({
+        background:'red'
+    })
+});
+
+
+$('.amPhoto').mouseleave(function () {
+    $(this).animate({
+        borderRadius: '50%'
+    }, 100)
+});
+/////////////slide with my projects//////////////////////////////////////////////////////////////////////////////
+
+
 
