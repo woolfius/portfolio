@@ -76,7 +76,7 @@ gulp.task('addFonts', function() {
 //watchers
 gulp.task('watch', function() {
     gulp.watch('app/style/**/*.scss', ['styles']);
-    gulp.watch('app/img/**/*.*', ['image']);
+    // gulp.watch('app/img/**/*.*', ['image']);
     gulp.watch('app/templates/**/*.jade', ['jade']);
     gulp.watch('app/js/libs/**/*.js', ['scripts']);
     gulp.watch('app/js/**/*.js', ['scripts']).on('change', browserSync.reload);;

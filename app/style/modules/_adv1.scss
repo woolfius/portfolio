@@ -1,0 +1,62 @@
+.adv1{
+  width:100%;
+  height:300px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+.adv_section{
+  width:80%;
+  height:150px;
+  display: flex;
+  justify-content:center;
+}
+.adv_block{
+  height:100px;
+  width:150px;
+
+  display: flex;
+  flex-direction:column;
+  justify-content:space-between;
+  align-items:center;
+  p{
+    width:80%;
+    height:40px;
+    text-align: center;
+  }
+}
+.adv_pict_small{
+  height: 60px;
+  width:60px;
+  //background: red;
+  border-radius:50%;
+  background-size: 70%;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.restAdv{
+  background-image: url("../img/rest.png");
+}
+.locAdv{
+  background-image: url("../img/location.png");
+}
+.timeAdv{
+  background-image: url("../img/time.png");
+}
+.wifiAdv{
+  background-image: url("../img/wifi.png");
+}
+.cardAdv{
+  background-image: url("../img/payCard.png");
+}
+.giftAdv{
+  background-image: url("../img/discount.png");
+}
+
+
+
+
+
+
