@@ -524,7 +524,7 @@ buildButtons()
 createGalery()
 chooseCarWash(0)
 getReview()
-
+buildFooter()
 
 
 function createGalery() {
@@ -545,11 +545,33 @@ function modifyGallery(n) {
     }
 
 }
-
+function buildFooter(){
+    var l = carWash.length
+    for (var i = 0; i < l; i++) {
+        $(".footerLocations").append('' +
+            '<div class="footer_loc">' +
+            '   <h3>'+carWash[i].name+'</h3>' +
+            '   <h4>'+carWash[i].addressCity+'</h4>' +
+            '<div class="footer_adress">' +
+            '   <h4>'+carWash[i].addressStr+'</h4>' +
+            '</div>' +
+            '<div class="footer_phone">' +
+            '<p>'+carWash[i].phoneMain+'</p>' +
+            '<p>'+carWash[i].phoneAdd+'</p>' +
+            '</div>' +
+            '</div>')
+    }
+}
 function buildButtons() {
     var l = carWash.length
     for (var i = 0; i < l; i++) {
-        $(".locations").append('<button onclick="chooseCarWash(' + i + ')" class="location loc' + i + '"> <img src="' + carWash[i].icon + '" alt="someFile"><h3>' + carWash[i].name + '</h3><h4>' + carWash[i].addressCity + '</h4><h4>' + carWash[i].addressStr + '</h4></button>')
+        $(".locations").append('' +
+            '<button onclick="chooseCarWash(' + i + ')" class="location loc' + i + '"> ' +
+            '   <img src="' + carWash[i].icon + '" alt="someFile">' +
+            '   <h3>' + carWash[i].name + '</h3>' +
+            '   <h4>' + carWash[i].addressCity + '</h4>' +
+            '   <h4>' + carWash[i].addressStr + '</h4>' +
+            '</button>')
     }
 }
 function chooseCarWash(n) {
@@ -591,7 +613,7 @@ function defineServices(s) {
         $('.loc_top_right').append('<span> -' + carWash[s].servicesList[i] + '</span>').fadeIn(1000)
     }
     $('.loc_bottom_right').empty();
-    $('.loc_bottom_right').append('<span> ' + carWash[s].phoneMain + ' - ' + carWash[s].phoneMainDesc + '</span><span> ' + carWash[s].phoneAdd + ' - ' + carWash[s].phoneAddDesc + '</span>').fadeIn(1000)
+    $('.loc_bottom_right').append('<span> ' + carWash[s].phoneMain + '  ' + carWash[s].phoneMainDesc + '</span><span> ' + carWash[s].phoneAdd + '  ' + carWash[s].phoneAddDesc + '</span>').fadeIn(1000)
 
 
 }
@@ -606,7 +628,9 @@ function buildServicesList() {
     var l = CarWashServices.length
     for (var i = 0; i < l; i++) {
         $('.services_nav').append('' +
-            '<button class="service_but" onclick="chooseService(' + i + ')"><h4>' + CarWashServices[i].name + '</h4></button>'
+            '<button class="service_but" onclick="chooseService(' + i + ')">' +
+            '<h4>' + CarWashServices[i].name + '</h4>' +
+            '</button>'
         );
     }
 
